@@ -1,0 +1,39 @@
+
+
+\documentclass{article}
+\usepackage{blindtext}
+\usepackage[utf8]{inputenc}
+ 
+\title{Stern-Gerlach August 18}
+\author{Joseph Lannan}
+\date{\today}
+ 
+\begin{document}
+ 
+\maketitle
+ 
+\section{Introduction}
+ 
+The Stern-Gerlach experiment was first devised by Otto Stern and Walther Gerlach. This experiment results in an observable phenomena that can not be explained classically.
+
+
+ 
+\section{The Experiment}
+ 
+In line with the original experiment, we will hypothetically take silver atoms and pass them through a gradient magnetic field of strength $B(x)$. Silver atoms have one unpaired electron (check this with the periodic table if you like) so the atoms will have a magnetic moment
+\[\mu = \mu_b\]
+where $\mu_b$ is the Bohr magneton. It then follows
+\[\vec{V} = -\vec{\mu}\cdot\vec{B}\]
+\[\vec{F} = -\nabla\vec{V}\]
+since $\mu$ is a constant, we can say
+\[\vec{F} = -\vec{\mu}\cdot\nabla\vec{B}\]
+For simplicity, we will say that the magnetic field only changes in the z direction and at a constant rate $b$ 
+\footnote{It isn't actually possible to create such a field, but as we will see later, the procession of the x and y magnetic moments shall cancel out much of the x and y force}.
+The force then becomes
+\[\vec{F} = -\vec{\mu}\cdot b\hat{z}\]
+If we interpret this classically, the direction of $\mu$ is arbitrary, it can point in any direction, we will expect to see the atoms coming out of the experiment to be smeared out.
+
+This is not however what we see from the Stern-Gerlach experiment.
+
+\end{document}
+
