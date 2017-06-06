@@ -1,0 +1,27 @@
+
+
+\documentclass{article}
+\usepackage{blindtext}
+\usepackage[utf8]{inputenc}
+\usepackage{braket}
+\title{Stern-Gerlach August 18}
+\author{Joseph Lannan}
+\date{\today}
+ 
+\begin{document}
+
+\maketitle
+ 
+\section{Bras, Kets, and Operations}
+Continuing our analogy to electromagnetic waves, we can write these waves as vectors such
+\begin{equation}
+\vec{E} = \begin{cases}
+E_0 \hat{x}cos(kz-\omega t) = R_e[E_0\hat{x}je^(i(kz-\omega t)  \ket(+)
+2 & E_0 \hat{x}cos(kz-\omega t) = R_e[E_0\hat{y}je^(i(kz-\omega t) \ket(-)
+\end{cases}
+\end{equation}
+\section{Section Name}
+
+
+\end{document}
+
