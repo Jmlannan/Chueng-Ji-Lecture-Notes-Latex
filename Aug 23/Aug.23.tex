@@ -1,27 +1,110 @@
-
-
 \documentclass{article}
 \usepackage{blindtext}
 \usepackage[utf8]{inputenc}
 \usepackage{braket}
-\title{Stern-Gerlach August 18}
+\usepackage{amsmath}
+\usepackage{commath}
+\title{August 23}
 \author{Joseph Lannan}
 \date{\today}
- 
 \begin{document}
-
 \maketitle
- 
 \section{Bras, Kets, and Operations}
 Continuing our analogy to electromagnetic waves, we can write these waves as vectors such
 \begin{equation}
-\vec{E} = \begin{cases}
-E_0 \hat{x}cos(kz-\omega t) = R_e[E_0\hat{x}je^(i(kz-\omega t)  \ket(+)
-2 & E_0 \hat{x}cos(kz-\omega t) = R_e[E_0\hat{y}je^(i(kz-\omega t) \ket(-)
-\end{cases}
+ \vec{E} = \left\{
+		\begin{array}{ll}
+			E_0\hat{x} \cos(kz - \omega t) = R_e[E_0 \hat{x}je^(i(kz - \omega t) \ket(+)\\
+			E_0\hat{x} \cos(kz - \omega t) = R_e[E_0 \hat{y}je^(i(kz - \omega t) \ket(-)
+		\right.
+	\end{cases}
+Re[E_0 \frac{ \hat{x} + \hat{y}}{ \sqrt[2]{z}}e^(-i(kz - \omega t))] = \ket{S_x^+} = \frac{ \ket{+} + \ket{-}}{ \sqrt[2]{2}}
+Re[E_0 \frac{- \hat{x} + \hat{y}}{ \sqrt[2]{z}}e^(i(kz - \omega t))] = \ket{S_x^-} = \frac{- \ket{+} + \ket{-}}{ \sqrt[2]{2}}
 \end{equation}
-\section{Section Name}
-
-
+Circularly polarized wave
+\begin{equation}
+Re[E_0\frac{\hat{x}+i\hat{y}}{\sqrt{2}}e^(i(kz-\omega t))} = \ket{S_y^+} = \frac{\ket{+} + i\ket{-}}{\sqrt{2}}
+Re[E_0\frac{\hat{x}+i\hat{y}}{\sqrt{2}}e^(i(kz-\omega t))} = \ket{S_y^+} = \frac{\ket{+} + i\ket{-}}{\sqrt{2}}
+\end{equation}
+Complex vector space must be introduced to cover the quantum space
+Dimension of the complex vector space depends on the system. 
+e.g. Ag^47 : spin-$\frac{1}{2}$ system, dimension 2
+spin-s system, $dim = 2s+1$
+Hilbert space- Nondenumerably infinite dimensional complex vectors pace (Quantum Mechanical Space)
+ef. Euclidean Space
+denumerable (countable); N(natural numbers
+nondenumerable (uncountable); real numbers, including irrational numbers
+While we usually indicate a finite number of dimensions N, of the ket space, the results can immediately be generalized to nondenumerably infinite dimensions. In quantum mechanics, a physical state (e.g. Ag^47 atom) with a finite spin orentation is represented by a state vector in a complex vector space. Following P.A.M Dirac's notations, we call such a state a ket and denote it by $\ket{\alpha}$. This state ket is postulated to contain complete information about the physical state, i.e. everything that we are allowed to ask about the state is contained in the ket.
+An obervable can be represented by an operation and denoted by A in the vector space in &question. Quite generally, an operator acts on a ket from the left:
+\begin{equation}
+A(\ket{\alpha}) = A\ket{\alpha)}
+\end{equation}
+$A\ket{\alpha)}$ is yet  ket. In general, $A\ket{\alpha)}$ is not a constant times $\ket{\alpha)$. However, there are particular kets of importance, known as eigenkets of operator A denoted by $\ket{a'}, \ket{a""},...$. They have the property
+\begin{equation}
+A\ket{a'} = a'\ket{a}, A\ket{a''} = a''\ket{a''},...
+\end{equation}
+where $a',a'',..$ are just numbers
+e.g.
+\begin{equation}
+S_z\ket{S_z^+} = \frac{\bar{h}}{2}\ket{S_z^+}
+S_z\ket{S_z^-} = -\frac{\bar{h}}{2}\ket{S_z^-}
+\end{equation}
+$c\ket{\alpha}$ and $\ket{\alpha}$ &represent the same physical state as long as $c \neq 0$
+Any arbitrary ket $\ket{\alpha}$ can be written as $\ket{\alpha} = \sum{a'} C_(a'}\ket{a'}$ with $a', a'',..$ where $C_a'$ is a complex coefficent
+e.g. $\ket{S_y^(\pm)} = \frac{1}{\sqrt{2}}\ket{S_z^+} \pm \frac{\iota}{\sqrt{2}}\ket{S_z^-}$
+At this point, it is convenient to introduce a dual space the Bra space to the ket space. In this space complex numbers become their conjugate
+$$
+c \leftrightarrow c^*
+\bra{\alpha} \leftrightarrow \ket{\apha}
+c\bra{\alpha} \leftrightarrow c^*\ket{\alpha}
+$$
+e.g. $\ket{S_y^(\pm) = \frac{1}{\sqrt{2}}\ket{S_z^+} \mp \frac{\iota}{\sqrt{2}} \ket{S_z^-}$
+section{Inner Product}
+$\braket{\beta}{\alpha} = \braket{\alpha}{\beta}^* \neq \braket{\alpha}{\beta}$
+e.g. $ \braket{S-y^-}{S_z^-}  = \frac{1}{\sqrt{2}}  = \braket{S_z^-}{S_y^-}^* = - \frac{\iota}{\sqrt{2}}^*$
+ The inner product corresponds to the dot product of the euclidean space 
+ $ \braket{\alpha}{\alpha}$ is real because $\braket{\alpha}{\alpha} = \braket{\alpha}{\alpha}$
+ $\braket{\alpha}{\alpha} = 0$ if $ket{\alpha}$ is a null ket
+ From a physicist's point of view, this point of view, this postulate is essential for the probabilistic interpretation of &quantum mechanics. A normalized ket,
+ $\ket{\tilde{\alpha}} = \frac{1}{\sqrt{\braket{\alpha}{\alpha} \ket{\alpha}$, since $\braket{\tilde{\alpha}}{\tilde{\alpha}} = 1$
+ $\sqrt{\alpha	}$is the norm of $\ket{\alpha}$ analogous to the norm in &euclidean geometry
+ Since $\ket{\alpha}$ and $c \ket{\alpha}$ represent the same physical state, we may require that kets be normalized in the sense of $\braket{\alpha}{\alpha} = 1$
+ If $\braket{\alpha}{\beta} = 0$ then $\ket{\alpha}$ and $\ket{\beta}$ are said to be orthogonal to each other
+ e.g. $\braket{S_z^+}{S_z^-} = 0$
+ Now, from $\ket{\alpha} = \sum _(a') \ket{a'}\braket{a'}{\alpha}$
+ Closure or Completeness Relation
+ $\braket{\apha}{\alpha} = \sum_(a') \abs{\braket{a'}{\alpha}} ^2 =1$
+ the sum of the &probability is unity
+\section{Properties of Operations}
+1. Two operators are the same (or equal) X = Y if $ X\ket{\alpha} = Y\ket{\alpha}$ for any $\ket{\alpha}$
+2. X is a null operator if $X\ket{\alpha} = 0$ for any $\ket{\alpha}$
+3. Addition of operators is commutative $ X + Y = Y + X$
+4. Addition of operators is associative $ X + ( Y + X) = (X + Y) + X$
+5. &Multiplication of operators is not &necessarily communicative (compatible) $XY \neq YX$
+The adjoin of an operator
+$X \leftrightarrow X^\daggar$ if $X = X^\daggar$ then $X$ is said to be Hermitian or Self-Adjoint
+Theory: The eigenvalues of a Hermititan &operator A are real; the eigenkets of A &correspond to different eigenvalues are orthogonal.
+Proof: 
+\begin{equation}
+A \ket{a'} = a' \ket{a'}, \bra{a'}\dagger{A} = a'^*\ket{a'}
+\ket{a'}A\bra{a'} = a' = a^*
+because \braket{a'}{a'} = 1
+A \ket{a'} = a' \ket{a'} and A\ket{a''} = a'' \ket{a''}
+then \bra{a''}A\ket{a} = a' \braket{a''}{a'}
+and \bra{a''} \daggar{A} \ket{a} = a''^* \braket{a''}{a'}
+Hemiticity implies \bra{a''} A \ket{a'} = a'' \braket{a''}{a'
+0 = (a'-a''}\braket{a''}{a'}
+Since a' \neq a'', \braket{a''}{a'} = 0 or \ket{a'} and \ket{a''} are orthogonal
+\end{equation}
+\section{Observables as an Outerproduct of Bras and Kets}
+\begin{equation}
+A = \sum_(i=1)^N a^i \ket{a^i} \bra{a^i}
+because A \ket{a^i} = a^i \ket{a^i} \bra{a^i}
+so A \ket{a^i} \bra{a^i} = a^i \bra{a^i} \ket{a^i}
+and A \sum_(i=1)^N \ket{a^i} \bra{a^i} = \sum_(i=1)^N a^i \ket{a^i} \bra{a^i}
+\sum_(i=1)^N \ket{a^i} \bra{a^i} = I the identity matix
+therefore A = \sum_(i=1)^N a^i \ket{a^i} \bra{a^i}
+e.g. S_z = \frac{\bar{h}}{2} \ket{S_z^+}\bra{S_z^+} - \frac{\bar{h}}{2} \ket{S_z^-}\bra{S_z^-}
+ = \frac{\bar{h}}{2	}(\ket{+}\bra{-} - \ket{-}\bra{-})
+\end{equation}
 \end{document}
-
