@@ -1,6 +1,23 @@
-\documentclass{article}
+\documentclass{book}
 \usepackage{physics}
+\usepackage{amsmath}
 \begin{document}
-\section{hello}
-$\bra{x}$
+\chapter{Matrix Representations}
+In the last lecture, we introduced kets, bras and operators. In this Chapter, we will show that they can be represented by column vectors, row vectors and matrices respectivly. This is possible due to the closure on completeness relation. 
+i.e. $I = \sum^N_{i=1} \ket{a^(i)} \bra{a^(i)} (i=1,2,...,N)$
+Identify operator is the sum of each and every orthonormal eigenket and corresponding eigenbra, where orthonormal means
+$$ \braket{a^(i)}{a^(i)} = \delta_{ij}$$
+where $\delta$ is the dirac delta function such that
+$$ \delta_{ij} = 
+\begin{cases}
+1, i = j \\
+0, i \neq j
+\end{cases}
+$$
+e.g. In spin-$\frac{1}{2}$ systems,
+$$ I = \ket{+}\bra{+} + \ket{-}\bra{-}$$
+where 
+$$ \braket{+}{+} = 1, \braket{+}{-} = \braket{-}{+} = 0, \braket{-}{-} = 1$$
+these results can be obtained by representing the vectors as
+
 \end{document}
