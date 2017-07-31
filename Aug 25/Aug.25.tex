@@ -38,6 +38,30 @@ $$\ket{a_2} = \begin{bmatrix} 0 \\ 1 \\ 0 \\ \vdots \\ 0 \end{bmatrix}$$
 and so on for up to $\ket{a_N}$ where each column vector has N entries. The corresponding bras or row vectors are
 $$\bra{a_1} = \begin{bmatrix} 1, & 0, & \hdots & 0 \end{bmatrix}$$
 $$\bra{a_2} = \begin{bmatrix} 0, & 1, & 0, & \hdots & 0 \end{bmatrix}$$
-These vectors form a complete N-dimensional vector space and we can write any other vector as a sum of coefficients 
+These vectors form a complete N-dimensional vector space and we can write any other vector as a sum of coefficients multiplied by our orthogonal basis
 $$ \ket{\alpha} = \sum^N C_N\ket{a_N} = \sum^N \ket{a_N} \bra{a_N} \ket{\alpha} $$
+\section{Operators as Outerproducts of Bras and Kets}
+$$X=\ket{\alpha} \bra{\beta}$$
+$\ket{\beta} = \ket{\alpha}$ if $\braket{\beta}{\beta} = 1$ (normalized) \\
+because $X\ket{\beta} = \ket{\alpha}\bra{\beta}\ket{\beta}$
+$$X = \begin{bmatrix}
+	\alpha_1 \\ \alpha_2 \\ \vdots \\ \alpha_N
+\end{bmatrix}
+\begin{bmatrix}
+	\beta_1*, & \beta_3* &  \hdots & \beta_N
+\end{bmatrix}
+=
+\begin{bmatrix}
+	\alpha_1\beta_1* & \alpha_1\beta_2* & \hdots & \alpha_1\beta_N* \\
+	\alpha_2\beta_1* & \alpha_2\beta_2* & \hdots & \alpha_2\beta_N* \\
+	\vdots & \vdots &  \ddots \\
+	\alpha_N\beta_1* & \alpha_N\beta_2* & \hdots & \alpha_N\beta_N
+\end{bmatrix}
+$$
+This operation created a N x N matrix
+The trace of a matrix or Tr is the sum of the elements on the diagonal on the matrix for this matrix;
+$$Tr X = \alpha_1\beta_1* + \alpha_2\beta_2* + \hdots + \alpha_N \beta_N $$
+it then follows that
+$$If X =\ket{\alpha}\bra{\beta}, then Tr X = \braket{\beta}{\alpha}$$
+
 \end{document}
