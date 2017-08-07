@@ -63,5 +63,54 @@ The trace of a matrix or Tr is the sum of the elements on the diagonal on the ma
 $$Tr X = \alpha_1\beta_1* + \alpha_2\beta_2* + \hdots + \alpha_N \beta_N $$
 it then follows that
 $$If X =\ket{\alpha}\bra{\beta}, then Tr X = \braket{\beta}{\alpha}$$
-
+Adjoint Operator
+$$X^\dagger = ket{\beta}\bra{\alpha} if X = \ket{\alpha}\bra{\beta}$$
+$\bra{\beta} X^\dagger$ is dual correspondent to $X\ket{\beta} = \ket{\alpha}$ \\
+($X^\dagger$ operator changes $\bra{\beta}$ to $\bra{\alpha}$ in bra space) \\
+$$X^\dagger = 
+\begin{bmatrix}
+   \beta_1 \\ \beta_2 \\ \vdots \\ \beta_N
+\end{bmatrix}
+\begin{bmatrix}
+   \alpha_1*, & \alpha_2* & \hdots, & \alpha_N*
+\end{bmatrix}
+=
+\begin{bmatrix}
+  \beta_1\alpha_1* & \beta_1\alpha_2* & \hdots & \beta_1\alpha_N* \\
+   \beta_2\alpha_1* & \beta_2\alpha_2* & \hdots & \beta_2\alpha_N* \\
+   \vdots & \vdots & & \vdots \\
+   \beta_N\alpha_1* & \beta_N\alpha_2* & \hdots & \beta_N\alpha_N* \\
+\end{bmatrix}
+$$
+Transpose of X is denoted by 
+$$X^T = 
+\begin{bmatrix}
+   \alpha_1\beta_1* & \alpha_2\beta_1* &  \hdots & \alpha_N\beta_1* \\
+   \alpha_1\beta_2* & \alpha_2\beta_2* & \hdots & \alpha_N\beta_2* \\
+   \hdots & \hdots & & \hdots \\
+   \alpha_1\beta_N & \alpha_2\beta_N & \vdots & \alpha_N\beta_N
+\end{bmatrix}
+$$
+Thus, $ X^\dagger = (X^T)*$
+i.e. The adjoint operator is equivalent to taking the transpose and then the complex conjugate
+$$(X^\dagger)_ij = X*_ji$$
+Note also
+$$X_ij = \bra{a^i} X \ket{a^j} = \bra{a^i}\ket{\alpha}\bra{\beta•}\ket{a^j} = \alpha_i\beta_j^*$$
+$$(X^\dagger)_ij = \ket{a^i} X^\dagger \ket{a^j} = \bra{a^j} X \ket{a^i}^* = X_ji^*$$
+In general,
+$$ \bra{\alpha} (X_1, X_2, ... , X_N) \ket{\beta}^* = \bra{\beta} X_N^\dagger, X_N ^\dagger, ... , X_2^\dagger X_1^\dagger \ket{\alpha} $$
+If $X = X^\dagger$, then X is self-adjoint or X is a Hermitian Operator
+$$X_ij = X_ji^* or X_ij^* = X_ji$$
+Thus, the diagonal elements of Hermitian Operator are reall as $X_ii = X_ii^*$
+It implies that the eigenvalues of Hermitian Operators are real. Observables are Hermitian Operators for this reason. Consider and observable A e.g. A could be $S_z$ or any spin observable.
+$$ A\ket{a^i} = a^i\ket{a^i} (i = 1, 2, \hdots, N) $$
+$$ A = A \cdot{} I = A ( \sum^N_{i=1} \ket{a^i}\bra{a^i}) = \sum^N_{i=1} A \ket{a^i}\bra{a^i}$$
+$$ = \sum^N_{i=1} a^i \ket{a^i} \bra{a^i} = 
+\begin{bmatrix}
+   a^1 & & & \text{\large 0} \\
+     & a^2 \\
+    & & \ddots	\\
+     \text{\large 0} & & & a^N
+\end{bmatrix}
+$$
 \end{document}
