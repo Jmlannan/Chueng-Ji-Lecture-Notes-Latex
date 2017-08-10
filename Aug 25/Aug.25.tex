@@ -113,4 +113,69 @@ $$ = \sum^N_{i=1} a^i \ket{a^i} \bra{a^i} =
      \text{\large 0} & & & a^N
 \end{bmatrix}
 $$
-\end{document}
+$$A^\dagger = \begin{bmatrix}
+ a^{1*} \\
+ & a^{2*} \\
+ & & \ddots \\
+ & & & a^{N*} \\
+\end{bmatrix}
+$$
+$$ \bra{a^i} A \ket{a^j} = a ^j \braket{a^i}{a^j} $$
+$$\bra{a^i} A^\dagger \ket{a^j} = \bra{a^j} A \ket{a^{i*}} \braket{a^j}{a^i}$$
+As $A^\dagger = A$ for an observable, $a^{i*} = a^i$ for all the eigenvalues. \\
+Also, $\braket{a^i}{a^j} = \delta_{ij}$ and thus if $a^i \neq a^i$ are real then$\braket{a^i}{a^j} = 0$ and the eigenkets $\ket{a^i}$ and $\ket{a^j}$ are orthogonal.
+\section{Spin-$\frac{1}{2}$ Example}
+$$ S_z \ket{+} = \frac{\bar{h}}{2} \ket{+} $$
+$$=  S_z \ket{-} = - \frac{\bar{h}}{2} \ket{-} $$
+$$= S_z = S_z I = S_z (\ket{+}\bra{+} + S_z \ket{-}\bra{-}) $$
+$$= S_z \ket{+} \bra{+} + S_z \ket {-} \bra{-} $$
+$$= \frac{\bar{h}}{2} \ket{+}\bra{+} - \frac{\bar{h}}{2} \ket{-}\bra{-}$$
+$$= \frac{\bar{h}}{2} \textbf{\huge (} \ket{+}\bra{+}  -  \ket{-}\bra{-} \textbf{\huge)}$$
+$$= \frac{\bar{h}}{2} \begin{bmatrix}
+ 1 & 0 \\
+ 0 & -1 \\
+\end{bmatrix}
+$$
+Note:
+$$ \ket{+} \bra{+} = \begin{bmatrix}
+ 1 & 0 \\ 0 & 0
+\end{bmatrix} $$
+$$ \ket{-} \bra{-} = \begin{bmatrix}
+ 0 & 0 \\ 0 & 1
+\end{bmatrix} $$
+Similarly, 
+$$ S_x \ket{S_x^+} = \frac{\bar{h}}{2}\ket{S_x^+} $$
+$$ S_x \ket{S_x^+} = - \frac{\bar{h}}{2}{\ket{S_x^-}} $$
+However, 
+$$\ket{S_x^+} = \frac{1}{\sqrt{2}} \ket{+} + \frac{1}{\sqrt{2}} \ket{-} = \begin{bmatrix}
+\frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}}
+\end{bmatrix}$$
+$$\ket{S_x^-} =- \frac{1}{\sqrt{2}} \ket{+} + \frac{1}{\sqrt{2}} \ket{-} = \begin{bmatrix}
+- \frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}}
+\end{bmatrix}$$
+Note
+$$ I = \ket{S_x^+} \bra{S_x^+} + \ket{S_x^-}\bra{S_x^-}$$
+$$ = \begin{bmatrix}
+  \frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}}
+\end{bmatrix}
+\begin{bmatrix}
+  \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}}
+\end{bmatrix} +
+ \begin{bmatrix}
+  - \frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}}
+\end{bmatrix}
+\begin{bmatrix}
+  - \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}}
+\end{bmatrix} = 
+\begin{bmatrix}
+  \frac{1}{2} &  \frac{1}{2} \\
+   \frac{1}{2} &  \frac{1}{2}
+\end{bmatrix} + 
+\begin{bmatrix}
+   \frac{1}{2} & - \frac{1}{2} \\
+   -  \frac{1}{2} &  \frac{1}{2}
+\end{bmatrix}
+$$
+$$S_x = \frac{\bar{h}}{2} ( \ket{S_x^+} \bra{S_x^+} - \ket{S_x^+} \bra{S_x^-})$$
+
+ \end{document}
