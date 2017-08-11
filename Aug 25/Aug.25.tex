@@ -125,13 +125,13 @@ $$\bra{a^i} A^\dagger \ket{a^j} = \bra{a^j} A \ket{a^{i*}} \braket{a^j}{a^i}$$
 As $A^\dagger = A$ for an observable, $a^{i*} = a^i$ for all the eigenvalues. \\
 Also, $\braket{a^i}{a^j} = \delta_{ij}$ and thus if $a^i \neq a^i$ are real then$\braket{a^i}{a^j} = 0$ and the eigenkets $\ket{a^i}$ and $\ket{a^j}$ are orthogonal.
 \section{Spin-$\frac{1}{2}$ Example}
-$$ S_z \ket{+} = \frac{\bar{h}}{2} \ket{+} $$
-$$=  S_z \ket{-} = - \frac{\bar{h}}{2} \ket{-} $$
+$$ S_z \ket{+} = \frac{\hbar}{2} \ket{+} $$
+$$=  S_z \ket{-} = - \frac{\hbar}{2} \ket{-} $$
 $$= S_z = S_z I = S_z (\ket{+}\bra{+} + S_z \ket{-}\bra{-}) $$
 $$= S_z \ket{+} \bra{+} + S_z \ket {-} \bra{-} $$
-$$= \frac{\bar{h}}{2} \ket{+}\bra{+} - \frac{\bar{h}}{2} \ket{-}\bra{-}$$
-$$= \frac{\bar{h}}{2} \textbf{\huge (} \ket{+}\bra{+}  -  \ket{-}\bra{-} \textbf{\huge)}$$
-$$= \frac{\bar{h}}{2} \begin{bmatrix}
+$$= \frac{\hbar}{2} \ket{+}\bra{+} - \frac{\hbar}{2} \ket{-}\bra{-}$$
+$$= \frac{\hbar}{2} \textbf{\huge (} \ket{+}\bra{+}  -  \ket{-}\bra{-} \textbf{\huge)}$$
+$$= \frac{\hbar}{2} \begin{bmatrix}
  1 & 0 \\
  0 & -1 \\
 \end{bmatrix}
@@ -144,8 +144,8 @@ $$ \ket{-} \bra{-} = \begin{bmatrix}
  0 & 0 \\ 0 & 1
 \end{bmatrix} $$
 Similarly, 
-$$ S_x \ket{S_x^+} = \frac{\bar{h}}{2}\ket{S_x^+} $$
-$$ S_x \ket{S_x^+} = - \frac{\bar{h}}{2}{\ket{S_x^-}} $$
+$$ S_x \ket{S_x^+} = \frac{\hbar}{2}\ket{S_x^+} $$
+$$ S_x \ket{S_x^+} = - \frac{\hbar}{2}{\ket{S_x^-}} $$
 However, 
 $$\ket{S_x^+} = \frac{1}{\sqrt{2}} \ket{+} + \frac{1}{\sqrt{2}} \ket{-} = \begin{bmatrix}
 \frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}}
@@ -176,6 +176,130 @@ $$ = \begin{bmatrix}
    -  \frac{1}{2} &  \frac{1}{2}
 \end{bmatrix}
 $$
-$$S_x = \frac{\bar{h}}{2} ( \ket{S_x^+} \bra{S_x^+} - \ket{S_x^+} \bra{S_x^-})$$
-
- \end{document}
+$$S_x = \frac{\hbar}{2} ( \ket{S_x^+} \bra{S_x^+} - \ket{S_x^+} \bra{S_x^-})$$
+$$ = \begin{bmatrix}
+ \frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} 
+\end{bmatrix}
+\begin{bmatrix}
+ \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} 
+\end{bmatrix} + 
+\begin{bmatrix}
+ - \frac{1}{\sqrt{2}}  \\ \frac{1}{\sqrt{2}} 
+\end{bmatrix}
+\begin{bmatrix}
+  - \frac{1}{\sqrt{2}} && \frac{1}{\sqrt{2}} 
+\end{bmatrix}
+$$
+$$
+= \begin{bmatrix}
+\frac{1}{2} & \frac{1}{2} \\
+\frac{1}{2} & \frac{1}{2}
+\end{bmatrix} + 
+\begin{bmatrix}
+ \frac{1}{2} & - \frac{1}{2} \\
+ - \frac{1}{2} & \frac{1}{2}
+\end{bmatrix} = 
+\begin{bmatrix}
+ 1 & 0 \\
+ 0 & 1
+\end{bmatrix}
+$$
+$$S_x = \frac{\hbar}{2}( \ket{S_x^+} \bra{S_x^+} - \ket{S_x^-} \bra{S_x^-})$$
+$$= \frac{\hbar}{2} ( \begin{bmatrix}
+ \frac{1}{2} & \frac{1}{2} \\
+ \frac{1}{2} & \frac{1}{2}
+\end{bmatrix} -
+\begin{bmatrix}
+ \frac{1}{2} & - \frac{1}{2} \\
+ -\frac{1}{2} &  \frac{1}{2}
+\end{bmatrix}$$
+$$ = \frac{\hbar}{2} \begin{bmatrix}
+ 0 & 1 \\
+ 1 & 0
+\end{bmatrix}$$
+How about Sy?
+$$S_y \ket{S_y^+} = \frac{\hbar}{2} \ket{S_y^+}$$
+$$S_y \ket{S_y^-} = -\frac{\hbar}{2} \ket{S_y^-} $$
+$$S_y = \frac{\hbar}{2}( \ket{S_y^+}\bra{S_y^+} - \ket{S_y^-}\bra{S_y^-})$$
+because $ I = \ket{S_y^-} \bra{S_y^-}$
+$$ As \ket	{S_y^+} = \frac{1}{\sqrt{2}}\ket{+} + \frac{\iota}{\sqrt{2}} \ket{-} = \begin{bmatrix}
+ \frac{1}{\sqrt{2}} \\ \frac{\iota}{\sqrt{2}}
+\end{bmatrix}$$
+$$ \ket{S_y^-} = \frac{1}{\sqrt{2}} \ket{+} - \frac{\iota}{\sqrt{2}} \ket{-} = \begin{bmatrix}
+ \frac{1}{\sqrt{2}} \\ \frac{-\iota}{\sqrt{2}}
+\end{bmatrix}$$
+$$\ket{S_y^+} \bra{S_y^+} = \begin{bmatrix}
+ \frac{1}{\sqrt{2}} \\ \frac{\iota}{\sqrt{2}}
+\end{bmatrix}
+\begin{bmatrix}
+ \frac{1}{\sqrt{2}} & - \frac{\iota}{\sqrt{2}}
+\end{bmatrix}
+\begin{bmatrix}
+  \frac{1}{2} & -\frac{\iota}{2} \\
+  \frac{\iota}{2} \frac{1}{2}
+\end{bmatrix}$$
+$$
+\ket{S_y^-}\bra{S_y^-} = \begin{bmatrix}
+\frac{1}{sqrt{2}} \\ -\frac{\iota}{\sqrt{2}} 
+\end{bmatrix}
+\begin{bmatrix}
+  \frac{1}{\sqrt{2}} & \frac{\iota}{\sqrt{2}}
+\end{bmatrix} =
+\begin{bmatrix}
+  \frac{1}{2} & \frac{\iota}{2} \\
+  - \frac{\iota}{2} & \frac{1}{2}
+\end{bmatrix} = I
+$$
+as it should be.
+$$ S_y = \frac{\hbar}{2} ( \begin{bmatrix}
+  \frac{1}{2} & - \frac{\iota}{2} \\
+  \frac{\iota}{2} & \frac{1}{2} 
+\end{bmatrix} -
+\begin{bmatrix}
+  \frac{1}{2} & \frac{\iota}{2} \\ 
+  -\frac{\iota}{2} & \frac{1}{2}
+\end{bmatrix} = 
+\frac{\hbar}{2} \begin{bmatrix}
+  0 & -\iota \\
+  \iota & 0
+\end{bmatrix}
+$$
+In summary, we get 
+$$ S_z = \frac{\hbar}{2}, S_y = \frac{\hbar}{2} \begin{bmatrix}
+  0 & -\iota \\
+  \iota & 0
+\end{bmatrix},
+S_x = \frac{\hbar}{2}
+$$
+\section{Pauli Matrices}
+Define $\vec{S} \equiv \frac{\hbar}{2} \vec{\sigma}$, where
+$$ \sigma_x = \sigma_1 = \begin{bmatrix}
+  0 & 1 \\
+  1 & 0
+\end{bmatrix},
+\sigma_y = \sigma_2 = \begin{bmatrix}
+  0 & -\iota \\
+  \iota & 0
+\end{bmatrix},
+\sigma_z = \sigma_3 = \begin{bmatrix}
+  1 & 0 \\
+  0 & -1
+\end{bmatrix}$$
+These are the Pauli Matrices
+${\sigma_1,\sigma_2,\sigma_3}$ forms SU(2) algebra ( special unitary two dimensional algebra). SU(2) group elements $U = e^{\iota \vec{\sigma}} \cdot \vec{\theta}$
+Commutator:
+$$[\sigma_i, \sigma	_j] = \sigma_i\sigma_j - \sigma_j\sigma_i = 2\iota \epsilon_{ijk} \sigma_k$$
+Anticommutator
+$${\sigma_i,\sigma_j} = \sigma_i\sigma_j + \sigma_j\sigma_i = 2\delta_{ij}$$
+$$\sigma_i^2 = I$$ 
+ex. $ \sigma_x\sigma_z\sigma_x = \sigma_x(2\iota \sigma_y) = \iota \sigma_x \sigma_y$
+$$= - \sigma_z$$
+\section{Group Element Example}
+Rotation of spin-$\frac{1}{2}$ system around z-axis by an angle $\phi$:
+$$e^{-\frac{\iota S_z \phi}{\hbar}} = e^{-\frac{\iota \sigma_z \phi}{2}}$$
+$$ e^{- \iota \sigma_z \frac{\phi}{2}} = I - \iota \sigma_z (\frac{\phi}{2}) + \frac{1}{2!}[-\iota\sigma_z(\frac{\phi}{2}]^2 + ...$$
+$$ I \{1-\frac{1}{2!}^2 + \frac{1}{4!} \frac{\phi}{2}^4 + ...\} - \iota	\sigma_z \{ \frac{\phi}{2} - \frac{1}{3!}(\frac{\phi}{2}^3 + ... \}$$
+$$I \cdot c_\sigma \frac{\sigma}{2} - \iota \sigma_z \sin \frac{\phi}{2}$$
+In general, rotation around $\hat{n}$-axis by angle $\theta$:
+$$ e^{\iota \vec{\sigma} \hat{n}(\frac{\theta}{2}} = c_\sigma - \iota \vec{\sigma} \cdot \hat{n} \sin \frac{\theta}{2}$$
+\end{document}
